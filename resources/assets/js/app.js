@@ -36,11 +36,36 @@ const app = new Vue({
     	addMessage(message) {
     		// Add to existing messages
             this.messages.push(message);
+
+            //persist to the database
+            axios.post('/messages', message).then(response => {
+                // Do whatever;
+            });
     	}
     },
     created() {
-        axions.get('/messages').then(response => {
+        axios.get('/messages').then(response => {
             this.messages = response.data
         });
+
+        //for different channels
+        //Echo.channel
+
+        Echo.join('chatroom')
+            .here((users) => {
+                this.usersInRoom = users;
+            })
+            .joining((user) => {
+                this.usersInRoom.push(user);
+            })
+            .leaving((user) => {
+                this.usersInRoom = this.usersInRoom.filter(u => u != user)
+            })
+            .listen('MessagePosted', (e) => {
+                this.messages.push({
+                    message: e.message.message,
+                    user: e.user
+                });
+            });
     }
 });
