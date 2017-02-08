@@ -21,16 +21,8 @@ Vue.component('chat-composer', require('./components/ChatComposer.vue'));
 const app = new Vue({
     el: '#app',
     data: {
-    	messages: [
-			{
-				message: 'Hey!',
-				user: "Luki"
-			},
-			{
-				message: 'Hello!',
-				user: "Luki"
-			}
-		]
+    	messages: [],
+        usersInRoom: []
     },
     methods: {
     	addMessage(message) {

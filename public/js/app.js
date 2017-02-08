@@ -11550,13 +11550,8 @@ Vue.component('chat-composer', __webpack_require__(45));
 var app = new Vue({
     el: '#app',
     data: {
-        messages: [{
-            message: 'Hey!',
-            user: "Luki"
-        }, {
-            message: 'Hello!',
-            user: "Luki"
-        }]
+        messages: [],
+        usersInRoom: []
     },
     methods: {
         addMessage: function addMessage(message) {
@@ -12597,7 +12592,8 @@ window.axios.defaults.headers.common = {
 
 window.Echo = new __WEBPACK_IMPORTED_MODULE_0_laravel_echo___default.a({
   broadcaster: 'pusher',
-  key: 'your-pusher-key'
+  key: '7b84a20f47885fbe2cbc',
+  cluster: 'eu'
 });
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
