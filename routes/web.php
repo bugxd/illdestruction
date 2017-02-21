@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/chat', function () {
     return view('chat');
-})->middleware('auth');
+})->middleware('auth')->name('chat');
 
 Route::get('/messages', function() {
 	return App\Message::with('user')->get();

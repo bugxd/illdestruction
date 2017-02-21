@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Ill Destruction</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -79,16 +79,19 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    ILL DESTRUCTION
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="jumbotron">
+                      <h1>Hello, world!</h1>
+                      <p>...</p>
+                      <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
                 </div>
+
+                <button type="button" class="btn btn-default" aria-label="Left Align">
+                  <a href="https://google.at">link zu google</a>
+                </button>
+
             </div>
         </div>
     </body>
